@@ -38,7 +38,7 @@ public:
         int l = s.size();
         std::unordered_map<char,int> maphash;
         int front = 0, tail = 0;
-        /** Note that it may be a empty string **/
+        /** Note that it may be an empty string **/
         int max_cnt = 0;
         for(; tail < l; ++tail) {
             auto it = maphash.find(s[tail]);
