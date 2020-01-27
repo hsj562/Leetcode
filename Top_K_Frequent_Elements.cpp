@@ -21,7 +21,7 @@ public:
         }
         vector<int> ret;
         while(!pq.empty()) {
-            int t = (pq.top()).second;
+            int t = (pq.top()).first;
             ret.push_back(t);
             pq.pop();
         }
