@@ -1,6 +1,7 @@
 class Solution {
 public:
     int findContentChildren(vector<int>& g, vector<int>& s) {
+        /** we can also assign from the smallest greed **/
         sort(g.begin(), g.end(), greater<int>());
         sort(s.begin(), s.end(), greater<int>());
         int gp = 0, sp = 0;
