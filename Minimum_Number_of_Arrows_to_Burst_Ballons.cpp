@@ -8,6 +8,7 @@
             if(points.empty()) {return 0;}
             sort(points.begin(), points.end(), compare);
             int cnt = 1;
+            /** Note that we cannot use INT_MIN to initialize last **/
             int last = points[0][1];
             for(int i = 1; i < points.size(); ++i) {
                 if(last < points[i][0]) {
