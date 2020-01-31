@@ -6,11 +6,11 @@ private:
     }
 public:
     int eraseOverlapIntervals(vector<vector<int>>& intervals) {
+        if(intervals.size() <= 0) {return 0;}
         sort(intervals.begin(), intervals.end(), compare);
         int rm = 0;
-        int s = intervals.size();
-        vector<int> last = {INT_MIN, INT_MIN};
-        for(int i = 0; i < s; ++i) {
+        vector<int> last = intervals[0];
+        for(int i = 1; i < intervals.size(); ++i) {
             if(intervals[i][0] < last[1]) 
                 rm++;
             else
