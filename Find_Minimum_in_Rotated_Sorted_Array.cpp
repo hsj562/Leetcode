@@ -5,7 +5,7 @@ public:
         /** we only focus on the side with minimum **/
         while(lo < hi) {
             int mid = lo + (hi - lo)/2;
-            if(nums[mid] <= nums[hi]) {
+            if(nums[mid] < nums[hi]) {
                 hi = mid;
             } else {
                 lo = mid+1;
