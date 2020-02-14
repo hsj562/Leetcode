@@ -1,7 +1,7 @@
 class Solution {
 private:
     bool isValid(string s) {
-        if( (s.length() == 1 || s[0] != '0') && stoi(s) < 256) return true;
+        if( (s.length() == 1 || s[0] != '0') && stoi(s) < 256) return true; // boolean function
         return false;
     }
     void solve(int idx, int seg, vector<string> &sub, string s, vector<string> &ret) {
@@ -30,7 +30,7 @@ public:
     vector<string> restoreIpAddresses(string s) {
         if(s.empty()) return {};
         vector<string> ret;
-        vector<string> sub;
+        vector<string> sub; // do not set the size
         solve(0, 0, sub, s, ret);
         return ret;
     }
